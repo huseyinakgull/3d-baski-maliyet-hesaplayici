@@ -28,23 +28,19 @@ def calculate_cost():
 
     result_label.config(text=f"Figürün maliyeti: {toplam_maliyet:.2f} TL.")
 
-# Tkinter penceresini oluştur
 root = tk.Tk()
 root.title("3D Figür Fiyat Hesaplama")
 
-# Kilo fiyatı girişi
 kilo_fiyati_label = tk.Label(root, text="Flamentin kilo fiyatını girin:")
 kilo_fiyati_label.pack()
 kilo_fiyati_entry = tk.Entry(root)
 kilo_fiyati_entry.pack() 
 
-# Gram miktarı girişi
 gram_miktari_label = tk.Label(root, text="Figürde kullanılan flamentin gram miktarını girin:")
 gram_miktari_label.pack()
 gram_miktari_entry = tk.Entry(root)
 gram_miktari_entry.pack()
 
-# Boyama kalitesi seçimi
 boyama_kalitesi_label = tk.Label(root, text="Figürün boyama kalitesini seçin:")
 boyama_kalitesi_label.pack()
 
@@ -62,7 +58,6 @@ kotu_radio.pack()
 boyasiz_radio = tk.Radiobutton(root, text="Boyasız", variable=boyama_kalitesi_var, value="boyasiz")
 boyasiz_radio.pack()
 
-# Kâr alınacak mı?
 kar_alinacak_label = tk.Label(root, text="Kâr alınacak mı?")
 kar_alinacak_label.pack()
 
@@ -74,7 +69,6 @@ evet_radio.pack()
 hayir_radio = tk.Radiobutton(root, text="Hayır", variable=kar_alinacak_var, value=False)
 hayir_radio.pack()
 
-# Vernik
 vernik_label = tk.Label(root, text="Vernik Var mı?")
 vernik_label.pack()
 
@@ -86,17 +80,13 @@ evet_vernik_radio.pack()
 hayir_vernik_radio = tk.Radiobutton(root, text="Hayır", variable=vernik, value=False)
 hayir_vernik_radio.pack()
 
-
-# Hesapla düğmesi
 calculate_button = tk.Button(root, text="Hesapla", command=calculate_cost)
 calculate_button.pack()
 
-# Sonuç
 result_label = tk.Label(root, text="")
 result_label.pack()
 
 isim_label = tk.Label(root, text="signed by quecy")
 isim_label.pack();
 
-# Pencereyi göster
 root.mainloop();
